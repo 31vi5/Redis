@@ -21,46 +21,46 @@ use Nette;
 class PhpRedisDriver extends \Redis implements Kdyby\Redis\IRedisDriver
 {
 
-	/**
-	 * {@inheritdoc}
-	 */
-	public function connect($host, $port = NULL, $timeout = 0)
-	{
-		$args = func_get_args();
-		return call_user_func_array('parent::connect', $args);
-	}
-
-
-
-	/**
-	 * {@inheritdoc}
-	 */
-	public function select($database)
-	{
-		$args = func_get_args();
-		return call_user_func_array('parent::select', $args);
-	}
-
-
-
-	/**
-	 * {@inheritdoc}
-	 */
-	public function script($command, $script = NULL)
-	{
-		$args = func_get_args();
-		return call_user_func_array('parent::script', $args);
-	}
-
-
-
-	/**
-	 * {@inheritdoc}
-	 */
-	public function evalsha($scriptSha, $argsArray = [], $numKeys = 0)
-	{
-		$args = func_get_args();
-		return call_user_func_array('parent::evalsha', $args);
-	}
+//	/**
+//	 * {@inheritdoc}
+//	 */
+//	public function connect( $host, $port = 6379, $timeout = 0.0, $reserved = null, $retry_interval = 0 )
+//	{
+//		$args = func_get_args();
+//		return call_user_func_array('parent::connect', $args);
+//	}
+//
+//
+//
+//	/**
+//	 * {@inheritdoc}
+//	 */
+//	public function select($database)
+//	{
+//		$args = func_get_args();
+//		return call_user_func_array('parent::select', $args);
+//	}
+//
+//
+//
+//	/**
+//	 * {@inheritdoc}
+//	 */
+//	public function script($command, $script)
+//	{
+//		$args = func_get_args();
+//		return call_user_func_array('parent::script', $args);
+//	}
+//
+//
+//
+//	/**
+//	 * {@inheritdoc}
+//	 */
+//	public function evalsha($scriptSha, $argsArray = [], $numKeys = 0)
+//	{
+//		$args = func_get_args();
+//		return call_user_func_array('parent::evalsha', $args);
+//	}
 
 }
